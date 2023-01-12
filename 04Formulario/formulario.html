@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <script src="JS/validar.js" ></script>
+</head>
+<body>
+
+    <p>
+        Todos los formularios web manejan metodos para poder enviar 
+        o recibir la informacion, los mas comunes son:
+        <br>
+        <h1>GET: </h1> este metodo se encarga de enviar la informacion 
+            la url o la salida estandar del navegador, esto propicia que se pueda 
+            visualizar la informacion del formulario, dando una vulnerabilidad en el
+            tratamiento de la informacion. Asi mismo es el metodo por defecto de cualquier
+            formulario.
+        <br>
+        <h1>POST: </h1> este metodo se encarga de enviar la informacion por la url de forma
+        oculta, nos sirve para poder realizar un registro de la informacion, por lo tanto
+        nos ofrece cierto grado de seguridad.
+
+    </p>
+
+    <br>
+    <form method="post" name="formulario" onsubmit="return validar(this)" action="">
+        <label>Nombre: </label>
+        <br>
+        <input type="text" name="nombre" id="nombre">
+        <br>
+        <label> Edad: </label>
+        <br>
+        <input type="text" name="edad" id="edad" min="1" max="99">
+        <br>
+        <label> Email: </label>
+        <br>
+        <input type="email" name="correo" id="corre">
+        <br>
+        <input type="submit" name="enviar" value="Enviar Datos">
+        <br>
+        <input type="reset" name="borrar" value="Borrar Datos">
+
+    </form>
+    
+</body>
+</html>
