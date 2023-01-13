@@ -179,7 +179,7 @@ const indiceDeChihuahua = razasDePerros.findIndex(
 
     */
 
-
+/*
 //en js podemos programar mediante el uso de clases
 //clase papa
 class FiguraGeometrica{
@@ -263,3 +263,97 @@ console.log(objetoRectangulo.area)
 
 
 //Spread   Destructuracion
+
+/*
+
+Spread
+
+Es una sintaxis que nos permite a un elemento iterable (arreglo, matriz, vector, cadena), ser extendido
+
+Vamos a tener dentro de ese elemento desde cero a mas argumentos que van a pasar por una funcion que se va 
+a encargar de obtener cada dato sin necesidad de hacer una llamada a cada indice
+
+
+
+*/
+
+
+//tenemos el siguiente arreglo
+/*
+const arregloOrdenadoMayorMenor = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
+
+console.log(`arregloOrdenadoMayorMenor: ${
+    arregloOrdenadoMayorMenor
+}`);
+
+/*
+Supongamos que usaremos varias veces la primera posicion que consiste
+en el valor mas grande del arreglo, por lo tanto es conveniente utilizar Spread
+*/
+/*
+const [valorMasGrande] = arregloOrdenadoMayorMenor;
+console.log(`valorMasGrande: ${
+    valorMasGrande
+}`);
+
+//que podemos obtener tantas variables del arreglo como deseemos a partir del patron
+//el patron es el nombre de la variable con sus correspondientes valores
+
+const [valorMasGrande1, valorMasGrande2, valorMasGrande3, ...restoValores] = arregloOrdenadoMayorMenor;
+console.log(`valorMasGrande1, valorMasGrande2, valorMasGrande3, ...restoValores: 
+    ${valorMasGrande1}, ${valorMasGrande2}, ${valorMasGrande3}, ${restoValores},
+    `);
+
+
+
+//supongamos que tenemos un ejemplo y queremos simplificar su busqueda
+*/
+const resultadoDeBusqueda = {
+    resultados: [
+        "resultado 1",
+        "resultado 2",
+        "resultado 3",
+        "resultado 4",
+        "resultado 5",
+        "resultado 6",
+        "resultado 7"
+    ],
+    total : 7,
+    mejorCoincidencia : "resultado 3"
+};
+
+console.log(`ResultadosDeBusqueda ${
+    resultadoDeBusqueda
+}`);
+
+//supongamos que solo nos interesa imprimir la mejor coincidencia
+const {mejorCoincidencia} = resultadoDeBusqueda;
+
+console.log(`mejorCoincidencia:  ${
+    mejorCoincidencia
+}`);
+
+
+//ademas podemos cambiar el nombre, lo cual puede llegar a ser util para mantener la consistencia
+//dentro del codigo aplicando Nomenclaturas
+
+const {mejorCoincidencia: nuevoNombre} = resultadoDeBusqueda;
+
+console.log(`nuevoNombre: ${
+    nuevoNombre
+}`);
+
+
+//vamos agregar informacion
+
+const copiaDelResultadoDeBusqueda = {...resultadoDeBusqueda};
+console.log(`copiaDelResultadoDeBusqueda: ${
+    copiaDelResultadoDeBusqueda
+}`);
+
+
+const copiaDelResultadoDeBusquedaModificar = {...resultadoDeBusqueda, cadenaBuscada: "resultado 3"};
+
+console.log(`copiaDelResultadoBusquedaModificar:  ${
+    copiaDelResultadoDeBusquedaModificar
+}`);
